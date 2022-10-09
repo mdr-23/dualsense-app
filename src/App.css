@@ -1,38 +1,102 @@
-.App {
-  text-align: center;
+/* FONTS */
+@font-face {
+  font-family: 'Open Sans', sans-serif;
+  src: url('../fonts/OpenSans-Light.ttf');
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.loader{
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.ps-logo{
+  height: 50px;
+  animation: loader-logo 2000ms infinite;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes loader-logo {
+  0%{
+    transform: scale(0);
   }
-  to {
-    transform: rotate(360deg);
+  50%{
+    transform: scale(5.0);
   }
+  100%{
+    transform: scale(0);
+  }
+}
+
+/* CARD */
+.card{
+  font-family: 'Open Sans', sans-serif;
+  animation: zoom-in 200ms;
+}
+
+@keyframes zoom-in {
+  0%{
+    transform: scale(0);
+  }
+  50%{
+    transform: scale(1.0);
+  }
+}
+
+.precio{
+  font-size: 30px;
+}
+
+.stock{
+  color: rgb(175, 174, 174);
+  font-weight: bold;
+}
+
+.btn-blanco{
+  padding: 10px;
+  border: rgb(175, 174, 174) 1px solid;
+  border-radius: 15px;
+  background-color: #fff;
+}
+
+.btn-negro{
+  padding: 10px;
+  border: rgb(175, 174, 174) 1px solid;
+  border-radius: 15px;
+  background-color: #111;
+}
+
+.btn-violeta{
+  padding: 10px;
+  border: rgb(175, 174, 174) 1px solid;
+  border-radius: 15px;
+  background-color: rgb(52, 20, 132);
+}
+
+.btn-rojo{
+  padding: 10px;
+  border: rgb(175, 174, 174) 1px solid;
+  border-radius: 15px;
+  background-color: rgb(153, 8, 63);
+}
+
+.btn-comprar{
+  border-radius: 20px !important;
+  padding: 8px 25px !important;
+  font-weight: bold !important;
+  margin-bottom: 15px;
+  background-color: #0070CC !important;
+  border: transparent 3px double !important;
+}
+
+.btn-comprar:hover{
+  background-color: #0070CC !important;
+  border: #fff 3px double !important;
 }
